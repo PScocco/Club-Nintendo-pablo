@@ -11,9 +11,11 @@
     width: 400px;
 }
 
+
 header {
     background-color: rgb(230, 1, 18);
     text-decoration-line: none;
+    width: 100%;
 }
 
 video{
@@ -22,7 +24,8 @@ video{
 
 main {
     background-color: rgb(255, 255, 255);
-    min-height: 300px;
+
+
 }
 
 main h1 {
@@ -42,7 +45,7 @@ main h2 {
 main p {
 
     color: grey;
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -52,6 +55,29 @@ main h3 {
 
 
 }
+
+.contenedorbutton{
+    display: flex;
+    justify-content: center;
+    
+    margin: 0px;
+}
+
+.button {
+    background-color: rgb(2,99,197);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+   
+font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+   
+  }
 
 section {
 
@@ -70,19 +96,19 @@ section {
     margin-left: auto;
 }
 
-.secciones {
-    display: flex;
-    justify-content: space-between;
-
-
-
+nav{
+    background-color: rgb(2,99,197);
+    
+   
+    
+   
 }
 
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+justify-content: center;
     
     
 
@@ -95,9 +121,19 @@ nav li {
 
 }
 
-a {
+nav a {
     text-decoration: none;
+    margin: 10px 10px;
+    transition: 1s;
+ 
 
+}
+
+nav a:hover{
+    
+    background-color: rgb(2,99,197);
+    transform: translate(0,-5px);
+    
 }
 
 form {
@@ -113,33 +149,42 @@ input {
     color: gray;
 }
 
-button {
+textarea{
     color: gray;
 }
 
 
 
 
+
+
 .productosdestacados {
     margin-bottom: 20px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-gap: 20px;
     justify-content: space-evenly;
 }
 
-.producto {
-    width: 300px;
-    border: solid lightgray;
-}
-img{
-    border-radius: 5%;
-}
+
 .cajaproducto {
     border: solid rgb(187, 187, 187);
-    border-radius: 5%;
-    width: 300px;
+   
+   
+width: 300px;
+height: 350px;
+transition: 0.5s;
+
+ 
 }
+
+
+
+.cajaproducto:hover{
+    transform: translate(0px, -10px);
+}
+
 
 .cajaproducto h3 {
     text-align: center;
@@ -147,6 +192,9 @@ img{
 
 .cajaproducto p {
     text-align: center;
+}
+.contenedorbutton{
+    
 }
 
 .contenedordeproductos {
@@ -156,6 +204,26 @@ img{
     justify-content: space-evenly;
     grid-gap: 20px;
 }
+
+.tituloproducto{
+    min-height: 40px;
+
+}
+.descripcionproducto{
+    height: 40px;
+  
+    overflow: hidden;
+    margin-bottom: 0px;
+    
+
+}
+.precioproducto{
+    font-size: larger;
+   font-weight: 800;
+    margin-bottom: 0;
+    color: rgb(230, 1, 18);
+}
+
 
 .novedadesgrid {
     display: grid;
@@ -176,21 +244,26 @@ iframe{
         
     }
 
-.novedadesaside li{
-    text-align: center;
-    color: gray;
-    list-style: none;
-}
-
-
 
 .columnanovedades{
+    display: flex;
+    justify-content: center;
+    
+}
+.posteonovedades{
     width: 560px;
 }
 
-.columnanovedades p{
+.posteonovedades p{
     padding: 5%;
 }
+
+.tituloblog{
+    background-color: rgb(2,99,197);
+    color: aliceblue;
+}
+
+
 
 
 
@@ -201,8 +274,13 @@ iframe{
 footer {
     background-color: rgb(230, 1, 18);
     text-align: center;
-
-
+    min-height: 50px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    
+}
+footer a{
+    text-decoration: none;
 }
 
 footer p {
@@ -213,7 +291,7 @@ footer p {
 
 @media only screen and (max-width: 768px) {
     .productosdestacados {
-        grid-template-columns: repeat(1, auto);
+        grid-template-columns: repeat(2, auto);
     }
 
     .contenedordeproductos {
@@ -225,28 +303,33 @@ footer p {
 
 @media only screen and (max-width: 480px) {
   
-
+video{
+    display: none;
+}
     .contenedordeproductos {
         grid-template-columns: repeat(1, auto);
 
     }
+    .logoinicio {
+        width: 270px;
+    }
 
     nav ul {
      
-        display: auto;
-        
-        
-    
-    }
-    .novedadesaside {
-        display: none;
-    }
+        display:block;
+        text-align: center;
+        }
+   
     .columnanovedades{
-        width: 480px;
+        width: 380px;
     }
     
     iframe{
         width: 100%;
+    }
+
+    footer{
+        margin-bottom: 20px;
     }
    
    
