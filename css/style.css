@@ -105,8 +105,11 @@ nav a:hover {
 }
 
 form {
-    text-align: center;
-}
+    width: 50%; /* Establece el ancho del formulario */
+    margin: 0 auto; /* Centra horizontalmente el formulario en el centro de la página */
+    text-align: center; /* Centra el contenido del formulario */
+  }
+  
 
 label {
     color: gray;
@@ -244,6 +247,9 @@ footer p {
     }
 
     .contenedordeproductos {
+        grid-template-columns: repeat(1, auto);
+    }
+    .productosdestacados{
         grid-template-columns: repeat(1, auto);
     }
 
