@@ -1,6 +1,6 @@
 * {
     margin: 0px;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     font-family: 'Raleway', sans-serif;
     padding: 0px;
 }
@@ -25,32 +25,36 @@ main {
 
 main h1 {
     font-size: 2rem;
-    color: grey;
+    color: rgb(120,120,120);
     margin-bottom: 10px;
     text-align: center;
 }
 
 main h2 {
     font-size: 2rem;
-    color: grey;
+    color: rgb(120,120,120);
     margin-bottom: 20px;
     text-align: center;
 }
 
 main p {
-    color: grey;
+    color: rgb(120,120,120);
     text-align: center;
     margin-bottom: 20px;
 }
 
 main h3 {
-    color: gray;
+    color: rgb(120,120,120);
 }
 
 .contenedorbutton {
     display: flex;
     justify-content: center;
     margin: 0px;
+}
+
+.redes{
+    margin: 20px;
 }
 
 .button {
@@ -216,16 +220,21 @@ footer {
     background-color: rgb(230, 1, 18);
     text-align: center;
     min-height: 50px;
-    margin-bottom: 20px;
+margin-bottom: 30px;
     font-size: 1rem;
+    width: 100%;
 }
 
 footer a {
     text-decoration: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 footer p {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 
@@ -249,10 +258,7 @@ footer p {
     .contenedordeproductos {
         grid-template-columns: repeat(1, auto);
     }
-    .productosdestacados{
-        grid-template-columns: repeat(1, auto);
-    }
-
+  
     .logoinicio {
         width: 270px;
     }
