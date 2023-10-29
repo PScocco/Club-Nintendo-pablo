@@ -10,10 +10,11 @@
     <link rel="shortcut icon" href="/img/seta.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
-
     <header>
         <a href="/index.html"><img class="logoinicio" src="/img/Logo-Club-600px.png" alt="logo"></a>
         <nav>
@@ -32,61 +33,54 @@
                 </a>
             </ul>
         </nav>
-
     </header>
+
 
     <main>
 
         <h1>Contacto</h1>
+        <div class="contentedorcontacto" >
         <p>Estamos ubicados en el barrio de Palermo, en Charcas 3223.</p>
         <p>Dejanos tu consulta.</p>
 
-        <form name="formulario">
-
-            <label for="nombre">Nombre: </label><input size="30" type="text" name="nombre"
-                placeholder="Ingrese su nombre aqui..."> <br><br>
-
-            <label for="email">Mail: </label><input size="30" type="email" name="email"
-                placeholder="Ingrese su apellido aqui..."> <br><br>
-
-            <label for="comentario">Comentario: </label><br><br>
-            
-            <textarea name="comentario" id="" cols="60" rows="10" ></textarea><br>
-
-            <input class="button" type="submit" value="Enviar" onclick="validar()"><br><br>
-
+        <form name="Formulario" onsubmit="return validarFormulario()">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+            </div>
+            <div class="mb-3">
+                <label for="comentario" class="form-label">Tu comentario</label>
+                <textarea class="form-control" name="comentario" rows="3"></textarea>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+            </div>
         </form>
 
-        
-
         <script>
-            function validar() {
-                //valido el nombre
-                if (document.formulario.nombre.value.length == 0) {
-                    alert("Tiene que escribir su nombre")
-                    document.fvalida.nombre.focus()
-                    return 0;
+            function validarFormulario() {
+                var nombre = document.forms["Formulario"]["nombre"].value;
+                var comentario = document.forms["Formulario"]["comentario"].value;
+
+                if (nombre === "" || comentario === "") {
+                    alert("Por favor, complete todos los campos.");
+                    return false;
                 }
 
-                if (document.formulario.comentario.value.length == 0) {
-                    alert("Tiene que escribir su comentario")
-                    document.fvalida.nombre.focus()
-                    return 0;
-                }
+                return true;
             }
-
-
         </script>
+        </div>
 
     </main>
 
     <footer>
 
         <p>Club Nintendo 2023</p>
-        <a target="_blank" href="http://www.facebook.com" class="fa fa-facebook fa-lg"></a>
-        <a target="_blank" href="http://www.twitter.com" class="fa fa-twitter fa-lg"></a>
-        <a target="_blank" href="http://www.youtube.com" class="fa fa-youtube fa-lg"></a>
-        <a target="_blank" href="http://www.instagram.com" class="fa fa-instagram fa-lg"></a>
+        <a target="_blank" href="http://www.facebook.com" class="fa fa-facebook fa-lg" style="color: white;"></a>
+        <a target="_blank" href="http://www.twitter.com" class="fa fa-twitter fa-lg" style="color: white;"></a>
+        <a target="_blank" href="http://www.youtube.com" class="fa fa-youtube fa-lg" style="color: white;"></a>
+        <a target="_blank" href="http://www.instagram.com" class="fa fa-instagram fa-lg" style="color: white;"></a>
 
     </footer>
 

@@ -8,6 +8,9 @@
 .logoinicio {
     width: 400px;
 }
+body{
+    width: 100%;
+}
 
 header {
     background-color: rgb(230, 1, 18);
@@ -28,6 +31,7 @@ main h1 {
     color: rgb(120,120,120);
     margin-bottom: 10px;
     text-align: center;
+
 }
 
 main h2 {
@@ -53,9 +57,9 @@ main h3 {
     margin: 0px;
 }
 
-.redes{
+/* .redes{
     margin: 20px;
-}
+} */
 
 .button {
     background-color: rgb(2, 99, 197);
@@ -83,6 +87,7 @@ section {
 
 nav {
     background-color: rgb(2, 99, 197);
+    width: 100%;
 }
 
 
@@ -109,7 +114,7 @@ nav a:hover {
 }
 
 form {
-    width: 50%; /* Establece el ancho del formulario */
+    width: 500px; /* Establece el ancho del formulario */
     margin: 0 auto; /* Centra horizontalmente el formulario en el centro de la página */
     text-align: center; /* Centra el contenido del formulario */
   }
@@ -193,10 +198,6 @@ iframe {
     margin-bottom: 20px;
 }
 
-.novedadesaside {
-    width: 300px;
-    background-color: rgb(241, 241, 241);
-}
 
 .columnanovedades {
     display: flex;
@@ -205,6 +206,8 @@ iframe {
 
 .posteonovedades {
     width: 560px;
+    margin: 0;
+    padding: 0;
 }
 
 .posteonovedades p {
@@ -212,9 +215,12 @@ iframe {
 }
 
 .tituloblog {
+    width: 100%;
     background-color: rgb(2, 99, 197);
     color: aliceblue;
 }
+
+
 
 footer {
     background-color: rgb(230, 1, 18);
@@ -255,6 +261,11 @@ footer p {
         display: none;
     }
 
+    form {
+        width: 70%; 
+        
+      }
+
     .contenedordeproductos {
         grid-template-columns: repeat(1, auto);
     }
@@ -269,8 +280,14 @@ footer p {
     }
 
     .columnanovedades {
-        width: 380px;
+        width: 350px;
     }
+
+    .contenedorcontacto {
+        width: 350px;
+    }
+
+    
 
     iframe {
         width: 100%;
