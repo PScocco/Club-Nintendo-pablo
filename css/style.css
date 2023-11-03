@@ -213,7 +213,8 @@ iframe {
 
 
 .posteonovedades {
-    width: 560px;
+    max-width: 560px;
+    width: 100%
     margin: 0;
     padding: 0;
 }
@@ -287,9 +288,7 @@ footer p {
         text-align: center;
     }
 
-    .columnanovedades {
-        width: 350px;
-    }
+   
 
     .contenedorcontacto {
         width: 350px;
